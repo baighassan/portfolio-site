@@ -1,0 +1,10 @@
+node_modules
+.next
+out
+*.tsbuildinfo
+.env*.local
+
+# local helper scripts
+PUSH-TO-GITHUB.bat
+push-to-github.ps1
+setup-log.txt
