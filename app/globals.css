@@ -329,6 +329,9 @@ h1 {
   flex-direction: column;
   gap: 16px;
 }
+.case + .case {
+  margin-top: 80px;
+}
 .case-head {
   display: flex;
   flex-wrap: wrap;

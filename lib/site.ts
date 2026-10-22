@@ -23,6 +23,21 @@ export type Work = {
 
 export const work: Work[] = [
   {
+    slug: "ticktally",
+    name: "Ticktally",
+    kind: "SaaS landing page with a live product demo",
+    label: "Concept",
+    summary:
+      "Landing page for a time tracking and invoicing app. The hero is a working demo: start the timer and the invoice beside it grows every second. Feature rows show real UI (rates, budgets, a weekly chart, invoice status) instead of icons, and pricing switches between monthly and yearly.",
+    stack: ["Next.js", "TypeScript", "SVG"],
+    images: [
+      { src: "/work/ticktally-desktop.jpg", alt: "Ticktally homepage with the timer running and the invoice total updating", ratio: "wide" },
+      { src: "/work/ticktally-mobile.jpg", alt: "Ticktally demo on a phone", ratio: "tall" },
+      { src: "/work/ticktally-features.jpg", alt: "Feature rows with rates table and budget bars", ratio: "wide" },
+    ],
+    bg: "#E2E6F1",
+  },
+  {
     slug: "juniper-dental",
     name: "Juniper Family Dental",
     kind: "Clinic website with online booking",
@@ -42,7 +57,6 @@ export const work: Work[] = [
 // Concepts being built next. Shown as a short list until they are finished.
 export const upcoming = [
   "Restaurant site with menu and table booking",
-  "SaaS product landing page",
   "Real estate listings with search and filters",
   "Booking dashboard with login and database",
 ];
