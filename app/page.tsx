@@ -6,7 +6,7 @@ import { site, work, upcoming, steps, pricing, faq } from "@/lib/site";
 const usd = (n: number) => `$${n.toLocaleString("en-US")}`;
 
 export default function Home() {
-  const lead = work[0];
+  const lead = work.find((w) => !w.video && w.images.length >= 2) ?? work[0];
 
   return (
     <>
@@ -64,14 +64,29 @@ export default function Home() {
                   {w.kind}
                 </p>
               </header>
-              <div className="case-grid" style={{ background: w.bg }}>
-                <figure className="case-main">
-                  <img src={w.images[0].src} alt={w.images[0].alt} loading="lazy" />
+              {w.video ? (
+                <figure className="case-video" style={{ background: w.bg }}>
+                  <video
+                    src={w.video.src}
+                    poster={w.video.poster}
+                    aria-label={w.video.alt}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
+                  />
                 </figure>
-                <figure className="case-side">
-                  <img src={w.images[1].src} alt={w.images[1].alt} loading="lazy" />
-                </figure>
-              </div>
+              ) : (
+                <div className="case-grid" style={{ background: w.bg }}>
+                  <figure className="case-main">
+                    <img src={w.images[0].src} alt={w.images[0].alt} loading="lazy" />
+                  </figure>
+                  <figure className="case-side">
+                    <img src={w.images[1].src} alt={w.images[1].alt} loading="lazy" />
+                  </figure>
+                </div>
+              )}
               <div className="case-foot">
                 <p>{w.summary}</p>
                 <ul className="stack" aria-label="Built with">

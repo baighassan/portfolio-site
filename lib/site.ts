@@ -17,11 +17,29 @@ export type Work = {
   summary: string;
   stack: string[];
   images: { src: string; alt: string; ratio: "wide" | "tall" }[];
+  /** Optional looping showcase video, shown full width instead of the two images. */
+  video?: { src: string; poster: string; alt: string };
   liveUrl?: string;
   bg: string;         // tile background
 };
 
 export const work: Work[] = [
+  {
+    slug: "ember-saffron",
+    name: "Ember & Saffron",
+    kind: "Full-stack restaurant website with its own CMS",
+    label: "Concept",
+    summary:
+      "A restaurant site the owner runs without a developer. Guests browse the menu with dietary filters and book a table from live availability. Staff log in to an admin panel to confirm bookings, edit dishes and prices, upload photos, read messages and change opening hours, and the website updates straight away.",
+    stack: ["Next.js", "Tailwind", "shadcn/ui", "Motion", "SQLite", "Drizzle"],
+    images: [],
+    video: {
+      src: "/work/ember-saffron.mp4",
+      poster: "/work/ember-saffron-poster.jpg",
+      alt: "Screen recording: the restaurant website on a phone next to its admin panel",
+    },
+    bg: "#120D0A",
+  },
   {
     slug: "ticktally",
     name: "Ticktally",
@@ -56,7 +74,6 @@ export const work: Work[] = [
 
 // Concepts being built next. Shown as a short list until they are finished.
 export const upcoming = [
-  "Restaurant site with menu and table booking",
   "Real estate listings with search and filters",
   "Booking dashboard with login and database",
 ];
