@@ -401,6 +401,15 @@ h1 {
   color: var(--muted);
   max-width: 42em;
 }
+.live-link {
+  margin-top: 16px;
+  min-height: 40px;
+  font-size: 14px;
+}
+.live-link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
 .stack {
   list-style: none;
   margin: 0;

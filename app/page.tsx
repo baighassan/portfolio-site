@@ -88,7 +88,16 @@ export default function Home() {
                 </div>
               )}
               <div className="case-foot">
-                <p>{w.summary}</p>
+                <div>
+                  <p>{w.summary}</p>
+                  {w.liveUrl && (
+                    <a className="btn btn-light live-link" href={w.liveUrl} target="_blank" rel="noopener">
+                      <span className="status-dot" aria-hidden="true" />
+                      View live site
+                      <span aria-hidden="true">↗</span>
+                    </a>
+                  )}
+                </div>
                 <ul className="stack" aria-label="Built with">
                   {w.stack.map((s) => (
                     <li key={s}>{s}</li>

@@ -38,6 +38,7 @@ export const work: Work[] = [
       poster: "/work/ember-saffron-poster.jpg",
       alt: "Screen recording: the restaurant website on a phone next to its admin panel",
     },
+    liveUrl: "https://ember-saffron-delta.vercel.app",
     bg: "#120D0A",
   },
   {
