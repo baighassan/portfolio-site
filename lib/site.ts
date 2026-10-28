@@ -25,6 +25,23 @@ export type Work = {
 
 export const work: Work[] = [
   {
+    slug: "bluegate-realty",
+    name: "Bluegate Realty",
+    kind: "Full-stack real estate website with its own CMS",
+    label: "Concept",
+    summary:
+      "A real estate site with a 3D carousel of featured homes, search with filters, neighborhood guides, photo galleries, a mortgage calculator and tour booking. Agents log in to add listings with drag-in photo uploads, mark homes sold, and move every enquiry through a lead pipeline, with views and leads on a dashboard.",
+    stack: ["Next.js", "Tailwind", "shadcn/ui", "Motion", "SQLite", "Drizzle"],
+    images: [],
+    video: {
+      src: "/work/bluegate-realty.mp4",
+      poster: "/work/bluegate-realty-poster.jpg",
+      alt: "Screen recording: the real estate website on a phone next to its admin panel",
+    },
+    liveUrl: "https://bluegate-realty.vercel.app",
+    bg: "#F1EEF6",
+  },
+  {
     slug: "ember-saffron",
     name: "Ember & Saffron",
     kind: "Full-stack restaurant website with its own CMS",
@@ -75,7 +92,6 @@ export const work: Work[] = [
 
 // Concepts being built next. Shown as a short list until they are finished.
 export const upcoming = [
-  "Real estate listings with search and filters",
   "Booking dashboard with login and database",
 ];
 
