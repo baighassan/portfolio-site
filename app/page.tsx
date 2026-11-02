@@ -107,14 +107,16 @@ export default function Home() {
             </article>
           ))}
 
-          <div className="upcoming">
-            <h3>In progress</h3>
-            <ul>
-              {upcoming.map((u) => (
-                <li key={u}>{u}</li>
-              ))}
-            </ul>
-          </div>
+          {upcoming.length > 0 && (
+            <div className="upcoming">
+              <h3>In progress</h3>
+              <ul>
+                {upcoming.map((u) => (
+                  <li key={u}>{u}</li>
+                ))}
+              </ul>
+            </div>
+          )}
         </section>
 
         {/* Services */}

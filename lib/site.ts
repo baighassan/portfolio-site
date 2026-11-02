@@ -25,6 +25,23 @@ export type Work = {
 
 export const work: Work[] = [
   {
+    slug: "juniper-family-dental",
+    name: "Juniper Family Dental",
+    kind: "Full-stack dental clinic website with online booking",
+    label: "Concept",
+    summary:
+      "A family dental practice site where patients see every price up front and book a real free slot in four steps, ending with a booking code and a calendar invite. Staff log in to confirm requests, run today's schedule, mark visits done, edit services and prices, manage the team and change opening hours and closed days, and the booking calendar follows straight away.",
+    stack: ["Next.js", "Tailwind", "shadcn/ui", "Motion", "SQLite", "Drizzle"],
+    images: [],
+    video: {
+      src: "/work/juniper-family-dental.mp4",
+      poster: "/work/juniper-family-dental-poster.jpg",
+      alt: "Screen recording: the dental clinic website and its booking flow on a phone next to the staff panel",
+    },
+    liveUrl: "https://juniper-family-dental.vercel.app",
+    bg: "#E4ECE7",
+  },
+  {
     slug: "bluegate-realty",
     name: "Bluegate Realty",
     kind: "Full-stack real estate website with its own CMS",
@@ -73,27 +90,10 @@ export const work: Work[] = [
     ],
     bg: "#E2E6F1",
   },
-  {
-    slug: "juniper-dental",
-    name: "Juniper Family Dental",
-    kind: "Clinic website with online booking",
-    label: "Concept",
-    summary:
-      "A family dental practice site built around booking: pick a visit, a day and a time in three taps. Self-pay fees are listed with standard procedure codes so patients see prices before they call.",
-    stack: ["Next.js", "TypeScript", "CSS"],
-    images: [
-      { src: "/work/juniper-desktop.jpg", alt: "Juniper Family Dental homepage with the booking card open", ratio: "wide" },
-      { src: "/work/juniper-mobile.jpg", alt: "Booking card on a phone", ratio: "tall" },
-      { src: "/work/juniper-fees.jpg", alt: "Self-pay fee table with procedure codes", ratio: "wide" },
-    ],
-    bg: "#E4ECE7",
-  },
 ];
 
 // Concepts being built next. Shown as a short list until they are finished.
-export const upcoming = [
-  "Booking dashboard with login and database",
-];
+export const upcoming: string[] = [];
 
 export type Service = {
   id: string;
